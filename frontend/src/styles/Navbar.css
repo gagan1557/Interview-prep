@@ -1,0 +1,288 @@
+.navbar {
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #3498db;
+}
+
+/* Navbar actions container for resume link and profile */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Resume link styles */
+.resume-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ecf0f1;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.resume-link:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.resume-icon {
+  font-size: 1.1rem;
+}
+
+/* Featured link for Video Interview */
+.featured-link {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+  position: relative;
+}
+
+.featured-link:hover {
+  background-color: #c0392b !important;
+  color: white !important;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+.video-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile Button Styles */
+.profile-container {
+  position: relative;
+}
+
+.profile-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-button:hover .avatar {
+  background-color: #2980b9;
+}
+
+/* Dropdown Styles */
+.profile-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.user-info {
+  padding: 16px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdown-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.user-email {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  word-break: break-all;
+  display: block;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #ecf0f1;
+  margin: 0;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  color: #2c3e50;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.dropdown-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f2f6;
+}
+
+@media (max-width: 1024px) {
+  .navbar-links {
+    gap: 1.2rem;
+  }
+  
+  .featured-link {
+    transform: scale(1);
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .navbar-actions {
+    gap: 1rem;
+  }
+  
+  .resume-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .featured-link {
+    width: 80%;
+    justify-content: center;
+    margin: 0.5rem auto;
+  }
+  
+  .navbar-actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .resume-link {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .profile-container {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .profile-dropdown {
+    position: fixed;
+    top: auto;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80%;
+    max-width: 300px;
+  }
+} 
