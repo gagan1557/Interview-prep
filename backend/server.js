@@ -84,7 +84,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Something went wrong!' });
 });
 
-// Only listen if not in a serverless environment
+// Only listen when running locally (not on Vercel)
 if (process.env.NODE_ENV !== 'production' || process.env.VERCEL === undefined) {
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, () => {
@@ -92,5 +92,5 @@ if (process.env.NODE_ENV !== 'production' || process.env.VERCEL === undefined) {
   });
 }
 
-// Export the app for Vercel
+// Export the app for Vercel serverless function
 module.exports = app; 
