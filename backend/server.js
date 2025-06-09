@@ -8,7 +8,7 @@ const resumeRoutes = require('./routes/resume');
 const speechRoutes = require('./routes/speech');
 const textInterviewRoutes = require('./routes/textInterview');
 const videoInterviewRoutes = require('./routes/videoInterview');
-const connectDB = require('./utils/db');
+const connectDB = require('./config/db');
 
 dotenv.config();
 
@@ -36,7 +36,7 @@ app.use('/api/speech', speechRoutes);
 app.use('/api/text-interview', textInterviewRoutes);
 app.use('/api/video-interview', videoInterviewRoutes);
 
-// Connect to DB before handling any request
+// Connect to DB before handling any request (for Vercel serverless compatibility)
 app.use(async (req, res, next) => {
   await connectDB();
   next();
